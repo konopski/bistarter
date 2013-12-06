@@ -5,7 +5,7 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  var stuffFromIndex = fs.readFile('index.html',{encoding: 'utf-8'});
+  var stuffFromIndex = fs.readFileSync('index.html',{encoding: 'utf-8'});
   response.send(stuffFromIndex);
 });
 
